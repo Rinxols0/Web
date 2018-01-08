@@ -1,0 +1,291 @@
+body{
+  font-family: 'Indie Flower', cursive;
+  background: #F8EEF0;
+  position: relative;
+  color: #7C7274;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+  text-indent: 20px;
+}
+
+header{
+  width: 100%;
+  height: 35px; /* ya veremos*/
+  background: #F8EEF0;
+  position: relative;
+}
+header h1{
+  display: none;
+  /*no muestra el logo y el Nombre para que no se vea en
+  la version movil y reduzca el espacio entre el header y 
+  el top de la pantalla*/
+}
+header nav .ioMenuMovil{
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  line-height: 40px;
+  margin: 0px 0px 0px 10px;
+  padding-top: 5px;
+}
+header nav .ioMenuMovil img{
+  width: 100%;
+}
+header nav #card_menu{
+  display: none;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: white;
+  top: -30px;
+  left: 0px;
+  border-right: 3px solid #F8E5E7;
+  z-index: 999;
+  padding-bottom: 100px; 
+}
+
+header nav #card_menu #logo_menu{
+  width: 200px;
+  height: 50%; 
+  margin-bottom: 50px;
+
+}
+header nav #card_menu #logo_menu img{
+  width: 100%;
+}
+header nav #card_menu ul{
+  left: 0px;
+}
+header nav #card_menu ul li{
+  list-style: none;
+  font-size: 1.3em;
+  line-height: 30px;
+}
+header nav #card_menu ul li a{
+  text-decoration: none;
+  color: #7C7274;
+   /*/////////cambiar el color de la letra*/
+}
+
+#slider{
+  width: 100%;
+  position: relative;
+}
+#slider section.slide {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#slider #SlideInicio{
+  height: 500px;
+  background: blue;
+}
+#slider #SlideViajar{
+  background: #F8EEF0;
+  position: relative;
+}
+#slider #SlideFriki{
+  height: 400px;
+  background: yellow;
+}
+#slider #SlideLeer{
+  height: 350px;
+  background: orange;
+}
+
+
+/* ///////////  Viajar //////////////*/
+#slider #SlideViajar #bloque1Viajar{
+ 
+  position: relative;
+}
+#slider #SlideViajar #bloque1Viajar div{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  
+}
+#slider #SlideViajar #bloque1Viajar div figure img,
+#slider #SlideViajar #bloque1Viajar div figure{
+  width: 98%;
+  min-height:300px;
+  padding: 0px;
+  margin: 5px;
+  border-radius:5px
+}
+.sombra:hover{
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+#slider #SlideViajar #bloque1Viajar p,
+#slider #SlideViajar #bloque2Viajar p{
+  margin: 30px;
+  width: 90%;
+}
+/*Viajar/////////////////////////////*/
+
+footer{
+    background: gray;
+    width: 100%;
+    height: 50px;
+}
+
+
+
+@media screen and (min-width: 480px){
+ /*++++++++++++Movil Girado++++++++++++++++++++*/
+  body{
+    background: yellow;
+  }
+  /*/////////////////// Viajar /////////////////////*/
+  #slider #SlideViajar #bloque1Viajar div{
+    height: 400px;
+  }
+  #slider #SlideViajar #bloque1Viajar p{
+    
+    margin:10px auto;
+  }
+  #slider #SlideViajar #bloque1Viajar div figure img,
+  #slider #SlideViajar #bloque1Viajar div figure{
+    max-height:425px;
+    max-width:500px;
+    margin:10px auto;
+  }
+  /*Viajar///////////////////////////////////////////*/
+
+}
+
+@media screen and (min-width: 767px){
+  /* ///////////versión pantalla PC pequeña / Tablet////////*/
+  body{
+    background: blue;
+  }
+  header nav{
+    display: none;
+  }
+  header{
+    height: 50px;
+  }
+  header h1{
+    display: inline-block;
+    width: 20%;
+    margin: 0px;
+    height: 50px;
+    margin-left: 50px;
+    line-height: 50px;
+    /*Coloca el h1 en linea, podremos el nav también en 
+    linea. Ancho del 20%, margin 0 para pegarlo al top.
+    height igual al del header. Margin left 50 para que no esté 
+    pegado a la izquierda. Line height de la misma 
+    altura o height que el h1 y el header, para que este
+    centrado en el alto*/
+    min-width: 200px;
+    overflow: hidden;
+  }
+  header h1 > *{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.8em;
+    margin: 0px 3px;
+  }
+  /* ++++++++++++posicionar y reducir el logo*/
+  header h1 figure{
+    height: 50px;
+    width: 50px;
+    margin: 0px;
+  }
+  header h1 figure img{
+    width: 100%;
+  }
+  /*++++++++++++posicionar el menu fuera de la targeta
+  de forma alargada en el header para PC*/
+  header nav{
+    display: inline-block;
+    vertical-align: middle;
+    width: 62%;
+    position: relative;
+    /*en linea, alineado en medio verticalmente, con un
+    ancho del 62 %, teniendo en cuenta que al logo + h1 le
+    dimos un 20%*/
+  }
+
+  header nav #MuestraMenu,
+  header nav #OcultaMenu{
+    display: none;
+    /*ocultamos los botones de menu*/
+  }
+  header nav #card_menu{
+    /*colocamos la tarjeta en linea con los demás elementos
+    del nav. Quitamos borde*/
+    display: inline-block;
+    border: none;
+    background: none;
+    position: relative;
+    /*lo posiciono en el top del nav y dandole el 100 del whith
+    osea ese 62% del nav. Lo posiciono de forma relativa dentro 
+    del nav.*/
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    /*Alineamos el texto a la derecha para que el menu se empiece a 
+    colocar desde la derecha, para que cuando se cambie de tamaño 
+    el espacio sobrante se quede entre el logo y el menu*/
+    text-align: right;
+    margin: 0px;
+    padding-bottom: 0px;
+  }
+  header nav #card_menu figure{
+    display: none;
+  }
+  header nav #card_menu ul{
+    padding: 0px;
+    margin: 0px;
+    margin-top: -15px;
+  }
+  header nav #card_menu ul li{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    font-size: 1.1em;
+    margin: 0px -5px;
+  }
+  
+
+ 
+}
+
+
+@media screen and (min-width: 950px){
+ /*/////////Pantalla PC ////////////////////*/
+  body{
+    background: green;
+  }
+   /* ///////////  Viajar //////////////*/
+  #slider #SlideViajar #bloque1Viajar{
+    width: 100%;
+    position: relative;
+  }
+  #slider #SlideViajar #bloque1Viajar div{
+    position: relative;
+    display: inline-block;
+    width: 47%;
+    margin:10px auto;
+    height: 350px;
+  }
+  #slider #SlideViajar #bloque1Viajar p{
+    position: relative;
+    display: inline-block;
+    width: 47%;
+    
+    /*para centrar el texto verticalmente*/
+    text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  /*Viajar/////////////////////////////*/
+}
+

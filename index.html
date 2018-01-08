@@ -1,0 +1,135 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Mobile first, para que no se haga zoom -->
+
+	<title>Rinxols.cat</title>	
+
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500i" rel="stylesheet">
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="css/normalize.css"> <!--Normalize -->
+	<script src="modernizr-custom.js"> </script> <!--Modernizr-->
+	<link rel="stylesheet" href="css/effects.css"> 
+	
+
+
+</head>
+<body>
+	<header>
+		<h1>
+			<figure><img src="img/logo.jpg" alt="Verónica Barea"></figure>
+			Verónica Barea
+		</h1>
+		<nav >
+			<figure id="MuestraMenu" class="ioMenuMovil" OnClick="displayMenu()"><img src="img/menu.jpg" alt=""></figure>
+			<!-- imagen para mostrar menu, debería ser un iconmoon y cumplimentar alt? -->
+			<div id="card_menu">
+				<figure id="OcultaMenu" class="ioMenuMovil" OnClick="displayMenu()"><img src="img/menu.jpg" alt=""></figure>
+				<!-- imagen para ocultar menu, debería ser un iconmoon y cumplimentar alt? -->
+				<figure id="logo_menu"><img src="img/logo.jpg" alt="Verónica Barea"></figure>
+				<ul>
+					<li><a href="#" OnClick = "navSection('SlideInicio')">Inicio</a></li>
+					<li><a href="#" OnClick = "navSection('SlideViajar')">Me gusta Viajar</a></li>
+					<li><a href="#" OnClick = "navSection('SlideFriki')">Soy una friki</a></li>
+					<li><a href="#" OnClick = "navSection('SlideLeer')">Me gusta leer</a></li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
+
+	<div id="slider">
+		<section class="slide" id="SlideInicio">
+			
+		</section>
+		<section class="slide" id="SlideViajar">
+			<div id="bloque1Viajar">
+				<div> 
+					<figure>
+						<img class="SliderEnViajar sombra" src="img/reducidas/Madeira2016.jpg" alt="Levada 25 Fontes, Madeira">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Hamburg2015.jpg" alt="Hamburg, Alemania">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Tailandia2015-2.jpg" alt="Koh Nang Yuan, Tailandia">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Tailandia2015.jpg" alt="Koh Tao, Tailandia">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Madrid2015.jpg" alt="eShow, Madrid">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Serbia2014.jpg" alt="Bor, Serbia">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Serbia2014-2.jpg" alt="Belgrado, Serbia">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Londres2014.jpg" alt="Londres">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Bolonia2014.jpg" alt="Bolonia, Italia">
+						<img class="SliderEnViajar sombra" src="img/reducidas/Malta2014.jpg" alt="Valletta, Malta">
+					</figure>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div id="bloque2Viajar">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</section>
+		<section class="slide" id="SlideFriki"></section>
+		<section class="slide" id="SlideLeer"></section>
+
+	</div>
+	
+	<footer>
+		hola hola
+	</footer>
+
+	<script>
+		function displayMenu(){
+			var displayCM;
+			//estado en el que esta
+			var menu = document.getElementById("card_menu");
+			//Pasamos todas las propiedades del objeto con ID card_menu
+			displayCM = menu.style.display;
+			//Guardamos el stylo display de menu
+
+			if (displayCM == "none"){
+				menu.style.display = "block";
+			} 
+			else{
+				menu.style.display = "none";
+			}
+			//mirar video 294 para error que no funciona la card_menu a la primera.
+		}
+		function navSection(nav){
+			
+			var sections = new Array(4);
+			sections[0]= "SlideInicio";
+			sections[1]= "SlideViajar";
+			sections[2]= "SlideFriki";
+			sections[3]= "SlideLeer";
+
+			var search;
+			
+			for (var i=0; i<4; i++){
+				search = document.getElementById(sections[i]);
+				search.style.display = "none";
+				// va recorriendo los elementos del array, sacando por el ID del elemento, que se ha guardado en search.
+				//pone en none el estilo display del section que está guardado en search
+
+				if (sections[i] == nav){
+					search.style.display = "block";	
+				}
+			}
+		}
+
+		var myIndex = 0;
+		carousel();
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("SliderEnViajar");
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";  
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {myIndex = 1}    
+		    x[myIndex-1].style.display = "block";  
+		    setTimeout(carousel, 4000); // Change image every 4 seconds
+		}
+
+	</script>
+
+</body>
+
+</html>
