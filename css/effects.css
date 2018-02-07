@@ -61,11 +61,12 @@ header nav #card_menu ul li, h2{
   list-style: none;
   font-size: 1em;
   line-height: 30px;
+  color: #727C7B;
+   /*/////////cambiar el color de la letra*/
 }
 header nav #card_menu ul li a{
   text-decoration: none;
-  color: #727C7B;
-   /*/////////cambiar el color de la letra*/
+  
 }
 
 #slider{
@@ -79,8 +80,8 @@ header nav #card_menu ul li a{
   left: 0px;
 }
 #slider #SlideInicio{
-  height: 500px;
-  background: blue;
+  background: #F8EEF0;
+  position: relative;
 }
 #slider #SlideViajar{
   background: #F8EEF0;
@@ -95,17 +96,38 @@ header nav #card_menu ul li a{
   background: orange;
 }
 
+/* ///////////  Inicio //////////////*/
+#slider #SlideInicio #InicioImagenInstagram{
+  position: relative;
+}
+.instagram-media {
+   background:#FFF;
+   border:0; 
+   border-radius:3px; 
+   box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
+   margin: 1px; 
+   max-width:500px; 
+   padding:0; 
+}
+#slider #SlideInicio #InicioImagenInstagram #Insta{
+  position: relative;
+  width: 92%;
+  margin: 20px;
+}
+#slider #SlideInicio #InicioImagenInstagram p{
+  margin: 20px;
+  width: 90%;
+}
+/*Inicio/////////////////////////////*/
 
 /* ///////////  Viajar //////////////*/
 #slider #SlideViajar #bloque1Viajar{
- 
   position: relative;
 }
 #slider #SlideViajar #bloque1Viajar div{
   position: relative;
   width: 100%;
   height: 300px;
-  
 }
 #slider #SlideViajar #bloque1Viajar div figure img,
 #slider #SlideViajar #bloque1Viajar div figure{
@@ -120,10 +142,11 @@ header nav #card_menu ul li a{
 }
 #slider #SlideViajar #bloque1Viajar p,
 #slider #SlideViajar #bloque2Viajar p{
-  margin: 30px;
+  margin: 20px;
   width: 90%;
 }
 /*Viajar/////////////////////////////*/
+
 
 footer{
     background: #7C7274;
@@ -138,12 +161,20 @@ footer{
   body{
     background: yellow;
   }
+  /*/////////////////// Inicio /////////////////////*/
+  #slider #SlideInicio #InicioImagenInstagram #Insta {
+    max-width:500px;
+  }   
+  #slider #SlideInicio #InicioImagenInstagram p{
+    margin: 20px;
+  }
+  /*Inicio///////////////////////////////////////////*/
+
   /*/////////////////// Viajar /////////////////////*/
   #slider #SlideViajar #bloque1Viajar div{
     height: 400px;
   }
   #slider #SlideViajar #bloque1Viajar p{
-    
     margin:10px auto;
   }
   #slider #SlideViajar #bloque1Viajar div figure img,
@@ -262,6 +293,40 @@ footer{
   body{
     background: green;
   }
+  /* ///////////  Inicio //////////////*/
+  #slider #SlideInicio #InicioImagenInstagram #Insta, 
+  #slider #SlideInicio #InicioImagenInstagram #Insta blockquote,
+  #slider #SlideInicio #InicioImagenInstagram #Insta blockquote div div,
+  #slider #SlideInicio #InicioImagenInstagram #Insta p {
+    width: 100%;
+    position: relative;
+  }
+  #slider #SlideInicio #InicioImagenInstagram div {
+    position: relative;
+    display: inline-block;
+    width: 47%;
+    margin: 10px auto;
+  }
+  #slider #SlideInicio #InicioImagenInstagram #Insta blockquote div{
+    width: 97%;
+    position: relative;
+  }
+  #slider #SlideInicio #InicioImagenInstagram p{
+    position: relative;
+    display: inline-block;
+    width: 47%;
+    margin-top: 75px;
+
+    /*para centrar el texto verticalmente*/
+    text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  /*Inicio/////////////////////////////*/
+
    /* ///////////  Viajar //////////////*/
   #slider #SlideViajar #bloque1Viajar{
     width: 100%;
