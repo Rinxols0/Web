@@ -45,8 +45,9 @@ header nav #card_menu{
 }
 
 header nav #card_menu #logo_menu{
-  width: 200px;
-  height: 50%; 
+  height: 200px;
+  width: 80%;
+  margin-left: 10%; 
   margin-bottom: 50px;
 
 }
@@ -213,7 +214,7 @@ footer{
     pegado a la izquierda. Line height de la misma 
     altura o height que el h1 y el header, para que este
     centrado en el alto*/
-    min-width: 200px;
+    min-width: 185px;
     overflow: hidden;
   }
   header h1 > *{
@@ -236,7 +237,7 @@ footer{
   header nav{
     display: inline-block;
     vertical-align: middle;
-    width: 62%;
+    width: 67%;
     position: relative;
     /*en linea, alineado en medio verticalmente, con un
     ancho del 62 %, teniendo en cuenta que al logo + h1 le
@@ -282,7 +283,7 @@ footer{
     width: 120px;
     text-align: center;
     font-size: 1.1em;
-    margin: 0px -5px;
+    margin: 0px 0px;
   }
   
 
