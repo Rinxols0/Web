@@ -86,14 +86,17 @@ header nav #card_menu ul li a{
 #slider #SlideViajar{
   background: #F8EEF0;
   position: relative;
+  display: none;
 }
 #slider #SlideFriki{
   height: 400px;
   background: yellow;
+  display: none;
 }
 #slider #SlideLeer{
   height: 350px;
   background: orange;
+  display: none;
 }
 
 /* ///////////  Inicio //////////////*/
