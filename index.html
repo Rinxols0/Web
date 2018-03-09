@@ -29,10 +29,10 @@
 			Verónica Barea
 		</h1>
 		<nav >
-			<figure id="MuestraMenu" class="ioMenuMovil" OnClick="displayMenu()"><img src="img/menu.jpg" alt=""></figure>
+			<figure id="MuestraMenu" class="ioMenuMovil" OnClick="displayMenu()"><img src="img/menu.png" alt=""></figure>
 			<!-- imagen para mostrar menu, debería ser un iconmoon y cumplimentar alt? -->
 			<div id="card_menu">
-				<figure id="OcultaMenu" class="ioMenuMovil" OnClick="displayMenu()"><img src="img/menu.jpg" alt=""></figure>
+				<figure id="OcultaMenu" class="ioMenuMovil" OnClick="displayMenu()"><img src="img/cerrar.png" alt=""></figure>
 				<!-- imagen para ocultar menu, debería ser un iconmoon y cumplimentar alt? -->
 				<figure id="logo_menu"><img src="img/logo.jpg" alt="Verónica Barea"></figure>
 				<ul>
@@ -93,6 +93,24 @@
 		<section class="slide" id="SlideLeer"></section>
 
 	</div>
+
+	<div id="contact_form">
+		<form action="contact.php" id="form" name="form1" method="post">
+			
+			<figure id="logo_mensaje"><img src="img/logo.jpg" alt="Enviame un mensaje"></figure>
+			<figure id="close_form" OnClick="displayFormContact('none')"><img src="img/cerrar.png" alt=""></figure>
+			<!-- <div id="close_form"></div> Si fuera un iconmoon-->
+			<p>Dime algo!</p> 
+
+			<input type="text" id="name" name="name" placeholder="Tu nombre"/> 
+			<input type="text" id="email" name="email" placeholder="Tu email"/>
+			<textarea name="message" id="message" placeholder="Mensaje"></textarea>
+			
+			<input type="submit" name="Submit" id="button" value="Enviar" />
+		</form>
+	</div>
+
+	<figure id="mail_botton" OnClick="displayFormContact('block')"><img src="img/mensaje.png" alt=""></figure>
 	
 	<footer>
 		hola hola
@@ -181,7 +199,13 @@
 		    x[myIndex-1].style.display = "block";  
 		    setTimeout(carousel, 4000); // Change image every 4 seconds
 		}
-
+		function displayFormContact(status){
+		 var form = document.getElementById("contact_form");
+		 //para controlar las caracteristicas del div con id contact_form
+			// que es el que tiene dentro el form
+		 form.style.display = status;
+		 // le fijamos el stylo al div que hemos controlado
+		}
 	</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
