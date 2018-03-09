@@ -153,6 +153,104 @@ header nav #card_menu ul li a{
 }
 /*Viajar/////////////////////////////*/
 
+/* contact form ///////////////////////////*/
+#contact_form {
+  position: absolute;
+  background: white;
+  right: 0px;
+  top: 70px;
+  width: 300px;
+  border-left: 3px solid #F8E5E7;
+  z-index: 998;
+  /* height: 100vh; 100% del altura del dispositivo, no
+  del padre*/
+  display: none;
+}
+#contact_form #logo_mensaje {
+  top:0px;
+  width: 80%;
+  height: 200px;
+  margin: 20%;
+  padding: 0px;
+}
+#contact_form #logo_mensaje img{
+  width: 80%;
+  margin: 0px; 
+}
+#contact_form #close_form{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 70%;
+  top: 250px;
+}
+#contact_form #close_form img{
+  width: 100%;
+}
+#contact_form #close_form img:hover{
+  cursor: pointer;
+}
+#contact_form p{
+  position: absolute;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 100px;
+  width: 90%;
+  left: -10px;
+  top:250px;
+}
+/* margin y width al parrafo para que no se salga de la */
+  /*pantalla y hacer correcto el responsive desing */
+#contact_form input,
+#contact_form textarea{
+  display: block;
+  margin: 20px;
+  width: 90%;
+  margin-left: 5%;
+  border: none;
+  border-bottom: 3px solid #F8E5E7;
+  padding-bottom: 3px;
+  margin-bottom: 40px;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 1em;
+} 
+#contact_form #button{
+  background: #F8E5E7;
+  border: none;
+  padding: 8px 0px;
+  border-radius: 5px;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 1em;
+  color: #727C7B;
+}
+#contact_form #button:hover{
+  cursor: pointer;
+  box-shadow:0 4px 8px 0 rgba(252,107,198,0.5),0 6px 20px 0 rgba(252,107,198,0.5)
+}
+
+#mail_botton {
+  width: 60px;
+  height: 60px;
+  background: #Fc6BC6;
+  border-radius: 5%;
+  border: 1px solid #727C7B;
+  z-index: 997;
+  right: 10px;
+  top: 70vh;
+  position: fixed;
+  cursor: pointer;
+}
+#mail_botton img{
+  width: 100%;
+}
+#mail_botton img:hover{
+  box-shadow:0 4px 8px 0 rgba(252,107,198,0.5),0 6px 20px 0 rgba(33,70,255,0.8)
+}
+/*////////////////////////////////////////////*/
+
 
 footer{
     background: #7C7C7B;
